@@ -21,7 +21,6 @@ def analyze_text(text):
         issues.append("Solicitud de datos personales detectada.")
         risk_score += 2
 
-    # NUEVAS REGLAS para riesgo medio
     if "actividad inusual" in text or "dispositivo desconocido" in text:
         issues.append("Actividad sospechosa detectada.")
         risk_score += 1
@@ -34,7 +33,6 @@ def analyze_text(text):
         issues.append("Verificación de identidad solicitada.")
         risk_score += 1
 
-    # Clasificación del riesgo
     if risk_score >= 5:
         risk_level = "🔴 Alto"
     elif risk_score >= 3:
