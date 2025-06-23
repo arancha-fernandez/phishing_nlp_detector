@@ -5,7 +5,6 @@ def analyze_text(text):
     issues = []
     risk_score = 0
 
-    # Reglas simples de ejemplo
     if "urgente" in text.lower() or "inmediatamente" in text.lower():
         issues.append("Tono urgente detectado.")
         risk_score += 2
@@ -22,7 +21,6 @@ def analyze_text(text):
         issues.append("Solicitud de datos personales detectada.")
         risk_score += 2
 
-    # Clasificación básica del riesgo
     if risk_score >= 5:
         risk_level = "🔴 Alto"
     elif risk_score >= 3:
